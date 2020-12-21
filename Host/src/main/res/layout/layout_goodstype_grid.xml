@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:background="@color/white"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center" android:orientation="horizontal" android:rowCount="2" android:columnCount="4">
+    <com.bawei.mall.widget.DrawableCenterTextView
+        android:id="@+id/tv_goodstype_live" style="@style/gridStyle"  android:text="直播" android:drawableTop="@drawable/ic_zhibo"></com.bawei.mall.widget.DrawableCenterTextView>
+    <com.bawei.mall.widget.DrawableCenterTextView
+        android:id="@+id/tv_goodstype_pc" style="@style/gridStyle"  android:text="电脑" android:drawableTop="@drawable/ic_diannao"></com.bawei.mall.widget.DrawableCenterTextView>
+    <com.bawei.mall.widget.DrawableCenterTextView
+        android:id="@+id/tv_goodstype_phone" style="@style/gridStyle"  android:text="手机" android:drawableTop="@drawable/ic_shouji"></com.bawei.mall.widget.DrawableCenterTextView>
+    <com.bawei.mall.widget.DrawableCenterTextView
+        android:id="@+id/tv_goodstype_pad" style="@style/gridStyle"  android:text="Pad" android:drawableTop="@drawable/ic_pad"></com.bawei.mall.widget.DrawableCenterTextView>
+    <com.bawei.mall.widget.DrawableCenterTextView
+        style="@style/gridStyle"  android:text="家居" android:drawableTop="@drawable/ic_jiaju"></com.bawei.mall.widget.DrawableCenterTextView>
+    <com.bawei.mall.widget.DrawableCenterTextView
+        style="@style/gridStyle"  android:text="家电" android:drawableTop="@drawable/ic_jiadian"></com.bawei.mall.widget.DrawableCenterTextView>
+    <com.bawei.mall.widget.DrawableCenterTextView
+        style="@style/gridStyle"  android:text="运动" android:drawableTop="@drawable/ic_yundong"></com.bawei.mall.widget.DrawableCenterTextView>
+    <com.bawei.mall.widget.DrawableCenterTextView
+        style="@style/gridStyle"  android:text="休闲" android:drawableTop="@drawable/ic_xiuxian"></com.bawei.mall.widget.DrawableCenterTextView>
+</GridLayout>

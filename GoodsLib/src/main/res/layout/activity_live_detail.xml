@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.LiveDetailActivity">
+    <cn.jzvd.JzvdStd
+        android:id="@+id/jz_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ImageView
+        android:id="@+id/mLiveDetailBackIv"
+        android:layout_margin="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"></ImageView>
+    <TextView
+        android:id="@+id/mLiveDetailDesc1Tv"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:clickable="true"
+        android:marqueeRepeatLimit="-1"
+        android:singleLine="true"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:text="欢迎来到我的直播间，好商品快去抢购吧"
+        android:layout_toRightOf="@+id/mLiveDetailBackIv"
+        android:layout_toEndOf="@+id/mLiveDetailBackIv"
+        android:layout_margin="25dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"></TextView>
+    <TextView
+        android:id="@+id/mLiveDetailViewerCount"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="1000人正在观看"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+    <LinearLayout
+        android:id="@+id/ll_goods"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true">
+        <include android:id="@+id/mItemGoodsDetails" layout="@layout/item_goodsdetail"></include>
+    </LinearLayout>
+
+</RelativeLayout>

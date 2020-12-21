@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bawei.goods">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity android:name="com.bawei.goods.ui.activity.LiveDetailActivity"></activity>
+        <activity
+            android:name="com.bawei.goods.ui.activity.LiveListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.bawei.goods.ui.activity.GoodsActivity" />
+        <activity android:name="com.bawei.goods.ui.activity.SearchGoodsActivity" />
+        <activity
+            android:name="com.bawei.goods.ui.activity.GoodsDetailActivity"
+            android:theme="@style/AppTheme.Black" />
+        <activity android:name="com.bawei.goods.ui.activity.CartActivity" />
+    </application>
+
+</manifest>

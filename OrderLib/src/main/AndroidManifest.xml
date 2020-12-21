@@ -1,0 +1,17 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+          package="com.bawei.order"
+>
+
+    <application android:allowBackup="true"
+                 android:label="@string/app_name"
+                 android:supportsRtl="true"
+    >
+        <activity android:name="com.bawei.order.ui.activity.OrderConfirmActivity"/>
+        <activity android:name="com.bawei.order.ui.activity.ShipAddressActivity"/>
+        <activity android:name="com.bawei.order.ui.activity.ShipAddressEditActivity"/>
+        <activity android:name="com.bawei.order.ui.activity.OrderActivity"/>
+        <activity android:name="com.bawei.order.ui.activity.OrderDetailActivity"/>
+    </application>
+
+</manifest>

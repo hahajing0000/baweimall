@@ -32,6 +32,19 @@
             android:layout_alignParentBottom="true"
             android:background="@drawable/border_top">
         <TextView
+            android:id="@+id/mImTv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/ic_dianxiaoer"
+            android:gravity="center"
+            android:text="店小二"
+            android:textColor="@drawable/bottom_nav_text_selector"
+            android:textSize="@dimen/text_small_size"/>
+        <TextView
                 android:id="@+id/mShareTv"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"

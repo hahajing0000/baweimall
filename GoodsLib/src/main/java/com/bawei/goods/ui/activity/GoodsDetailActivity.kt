@@ -1,5 +1,9 @@
 package com.bawei.goods.ui.activity
 
+import android.animation.Animator
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
+import android.animation.ValueAnimator
 import android.os.Bundle
 import android.support.design.widget.TabLayout
 import android.view.Gravity
@@ -16,6 +20,7 @@ import com.bawei.goods.ui.adapter.GoodsDetailVpAdapter
 import com.bawei.base.common.afterLogin
 import kotlinx.android.synthetic.main.activity_goods_detail.*
 import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.toast
 import q.rorbin.badgeview.QBadgeView
 
 /*
@@ -24,6 +29,7 @@ import q.rorbin.badgeview.QBadgeView
 class GoodsDetailActivity:BaseActivity() {
 
     private lateinit var mCartBdage:QBadgeView
+    lateinit var animatorSet:AnimatorSet
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -31,11 +37,34 @@ class GoodsDetailActivity:BaseActivity() {
         initView()
         initObserve()
         loadCartSize()
+        startAnimate();
+    }
+
+    /**
+     * 开启动画
+     */
+    private fun startAnimate() {
+        animatorSet=AnimatorSet()
+        val animatorx=ObjectAnimator.ofFloat(mImTv,"scaleX",1F,1.1F)
+        animatorx.repeatCount= Animator.DURATION_INFINITE.toInt()
+        animatorx.setDuration(2000)
+        val animatory=ObjectAnimator.ofFloat(mImTv,"scaleY",1F,1.1F)
+        animatory.repeatCount= Animator.DURATION_INFINITE.toInt()
+        animatory.setDuration(2000)
+        animatorSet.playTogether(animatorx,animatory)
+
+        animatorSet.start()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        animatorSet.cancel()
+
     }
 
     /*
-        初始化视图
-     */
+            初始化视图
+         */
     private fun initView() {
         mGoodsDetailTab.tabMode = TabLayout.MODE_FIXED
         mGoodsDetailVp.adapter = GoodsDetailVpAdapter(supportFragmentManager,this)
@@ -54,6 +83,10 @@ class GoodsDetailActivity:BaseActivity() {
 
         mLeftIv.onClick {
             finish()
+        }
+
+        mImTv.onClick {
+            toast("呼叫店小二")
         }
 
         mCartBdage = QBadgeView(this)

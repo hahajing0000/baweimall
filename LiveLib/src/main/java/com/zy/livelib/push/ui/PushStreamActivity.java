@@ -3,6 +3,7 @@ package com.zy.livelib.push.ui;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.tencent.rtmp.TXLivePushConfig;
 import com.tencent.rtmp.TXLivePusher;
@@ -69,10 +70,14 @@ public class PushStreamActivity extends AppCompatActivity {
      * 初始化直播设置
      */
     private void initLive() {
-        TXLivePushConfig mLivePushConfig=new TXLivePushConfig();
-        mLivePusher = new TXLivePusher(this);
-        // 一般情况下不需要修改 config 的默认配置
-        mLivePusher.setConfig(mLivePushConfig);
+        try{
+            TXLivePushConfig mLivePushConfig=new TXLivePushConfig();
+            mLivePusher = new TXLivePusher(this);
+            // 一般情况下不需要修改 config 的默认配置
+            mLivePusher.setConfig(mLivePushConfig);
+        }catch (Exception ex){
+            Toast.makeText(this,"直播推流出现问题，可能因为超过试用时间",Toast.LENGTH_SHORT).show();
+        }
     }
 
     /**

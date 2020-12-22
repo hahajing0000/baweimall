@@ -18,6 +18,7 @@ import com.bawei.provider.common.ProviderConstant
 import com.bawei.base.common.afterLogin
 import com.bawei.base.common.isLogined
 import com.bawei.user.ui.activity.UserInfoActivity
+import com.zy.livelib.push.ui.PushStreamActivity
 import kotlinx.android.synthetic.main.fragment_me.*
 import org.jetbrains.anko.support.v4.startActivity
 import org.jetbrains.anko.support.v4.toast
@@ -52,7 +53,7 @@ class MeFragment : BaseFragment(), View.OnClickListener {
         mAddressTv.onClick(this)
         mShareTv.onClick(this)
         mSettingTv.onClick(this)
-
+        mLiveTv.onClick(this)
 
     }
 
@@ -114,6 +115,10 @@ class MeFragment : BaseFragment(), View.OnClickListener {
             }
             R.id.mSettingTv -> {
                 startActivity<SettingActivity>()
+            }
+            R.id.mLiveTv->{
+                toast("模拟无法使用，暂时关闭")
+//                startActivity<PushStreamActivity>()
             }
         }
     }

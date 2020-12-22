@@ -4,11 +4,11 @@ package com.bawei.pay.data.repository
 import javax.inject.Inject
 
 import rx.Observable
-import com.bawei.base.data.net.RetrofitFactory
-import com.bawei.base.data.protocol.BaseResp
 import com.bawei.pay.data.protocol.GetPaySignReq
 import com.bawei.pay.data.protocol.PayOrderReq
 import com.bawei.pay.data.api.PayApi
+import com.bawei.provider.entity.protocol.BaseResp
+import com.zy.netutilslib.RetrofitFactory
 
 
 /*

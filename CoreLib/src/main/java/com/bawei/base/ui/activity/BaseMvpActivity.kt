@@ -2,14 +2,13 @@ package com.bawei.base.ui.activity
 
 import android.os.Bundle
 import com.alibaba.android.arouter.launcher.ARouter
-import com.bawei.base.common.BaseApplication
-import com.bawei.base.injection.component.ActivityComponent
-import com.bawei.base.injection.component.DaggerActivityComponent
-import com.bawei.base.injection.module.ActivityModule
-import com.bawei.base.injection.module.LifecycleProviderModule
 import com.bawei.base.presenter.BasePresenter
 import com.bawei.base.presenter.view.BaseView
 import com.bawei.base.widgets.ProgressLoading
+import com.kotlin.base.injection.component.ActivityComponent
+import com.kotlin.base.injection.component.DaggerActivityComponent
+import com.kotlin.base.injection.module.ActivityModule
+import com.kotlin.base.injection.module.LifecycleProviderModule
 import org.jetbrains.anko.toast
 import javax.inject.Inject
 
@@ -22,7 +21,7 @@ abstract open class BaseMvpActivity<T : BasePresenter<*>> : BaseActivity(), Base
     @Inject
     lateinit var mPresenter: T
 
-    lateinit var mActivityComponent:ActivityComponent
+    lateinit var mActivityComponent: ActivityComponent
 
     private lateinit var mLoadingDialog:ProgressLoading
 
@@ -46,7 +45,7 @@ abstract open class BaseMvpActivity<T : BasePresenter<*>> : BaseActivity(), Base
         初始Activity Component
      */
     private fun initActivityInjection() {
-        mActivityComponent = DaggerActivityComponent.builder().appComponent((application as BaseApplication).appComponent)
+        mActivityComponent = DaggerActivityComponent.builder().appComponent((application as com.zy.dilib.injection.BaseApplication).appComponent)
                 .activityModule(ActivityModule(this))
                 .lifecycleProviderModule(LifecycleProviderModule(this))
                 .build()

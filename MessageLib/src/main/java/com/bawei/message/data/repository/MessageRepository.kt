@@ -4,10 +4,10 @@ package com.bawei.message.data.repository
 import javax.inject.Inject
 
 import rx.Observable
-import com.bawei.base.data.net.RetrofitFactory
 import com.bawei.message.data.api.MessageApi
-import com.bawei.base.data.protocol.BaseResp
 import com.bawei.message.data.protocol.Message
+import com.bawei.provider.entity.protocol.BaseResp
+import com.zy.netutilslib.RetrofitFactory
 
 
 /*

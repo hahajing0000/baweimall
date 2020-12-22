@@ -45,6 +45,9 @@ android {
 }
 
 dependencies {
+    implementation project(path: ':CoreLib')
+    compile project(path: ':DILib')
+    compile project(path: ':NetUtilsLib')
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     compile project(':CommonLib')

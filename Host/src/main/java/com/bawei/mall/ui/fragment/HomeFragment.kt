@@ -39,8 +39,8 @@ import org.jetbrains.anko.support.v4.toast
  */
 class HomeFragment:BaseMvpFragment<GoodsInfoPresenter>(),GoodsInfoView {
     private lateinit var  goodsListAdapter:RecommendAdapter
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        super.onCreateView(inflater, container,savedInstanceState)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        super.onCreateView(inflater!!, container,savedInstanceState)
         return inflater?.inflate(R.layout.fragment_home,null)
     }
 

@@ -1,10 +1,10 @@
 package com.bawei.mall.data.repository
 
-import com.bawei.base.data.net.RetrofitFactory
-import com.bawei.base.data.protocol.BaseResp
 import com.bawei.goods.data.protocol.GetGoodsListReq
 import com.bawei.goods.data.protocol.Goods
 import com.bawei.mall.data.api.GoodsInfoApi
+import com.bawei.provider.entity.protocol.BaseResp
+import com.zy.netutilslib.RetrofitFactory
 import rx.Observable
 import javax.inject.Inject
 

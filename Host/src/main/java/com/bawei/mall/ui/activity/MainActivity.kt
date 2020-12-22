@@ -7,7 +7,7 @@ import com.eightbitlab.rxbus.Bus
 import com.eightbitlab.rxbus.registerInBus
 import com.bawei.base.common.AppManager
 import com.bawei.base.ui.activity.BaseActivity
-import com.bawei.base.utils.AppPrefsUtils
+import com.zy.storagelib.AppPrefsUtils
 import com.bawei.goods.common.GoodsConstant
 import com.bawei.goods.event.UpdateCartSizeEvent
 import com.bawei.goods.ui.fragment.CartFragment
@@ -125,7 +125,7 @@ class MainActivity : BaseActivity() {
         加载购物车数量
      */
     private fun loadCartSize(){
-        mBottomNavBar.checkCartBadge(AppPrefsUtils.getInt(GoodsConstant.SP_CART_SIZE))
+        mBottomNavBar.checkCartBadge(com.zy.storagelib.AppPrefsUtils.getInt(GoodsConstant.SP_CART_SIZE))
     }
 
     /*

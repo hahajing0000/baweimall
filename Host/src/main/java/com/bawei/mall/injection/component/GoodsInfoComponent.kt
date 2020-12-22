@@ -1,9 +1,9 @@
 package com.bawei.mall.injection.component
 
-import com.bawei.base.injection.PerComponentScope
-import com.bawei.base.injection.component.ActivityComponent
 import com.bawei.mall.injection.module.GoodsInfoModule
 import com.bawei.mall.ui.fragment.HomeFragment
+import com.kotlin.base.injection.PerComponentScope
+import com.kotlin.base.injection.component.ActivityComponent
 import dagger.Component
 
 /**

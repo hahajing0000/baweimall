@@ -17,13 +17,13 @@ import kotlinx.android.synthetic.main.fragment_goods_detail_tab_two.*
  */
 class GoodsDetailTabTwoFragment : BaseFragment() {
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        super.onCreateView(inflater, container, savedInstanceState)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        super.onCreateView(inflater!!, container, savedInstanceState)
         return inflater?.inflate(R.layout.fragment_goods_detail_tab_two, container, false)
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view!!, savedInstanceState)
         initObserve()
     }
 

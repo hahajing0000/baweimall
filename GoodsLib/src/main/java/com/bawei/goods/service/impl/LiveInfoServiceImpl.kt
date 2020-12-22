@@ -1,9 +1,9 @@
 package com.bawei.goods.service.impl
 
-import com.bawei.base.data.protocol.BaseResp
 import com.bawei.goods.data.protocol.LiveRealInfo
 import com.bawei.goods.data.repository.LiveInfoRepository
 import com.bawei.goods.service.LiveInfoService
+import com.bawei.provider.entity.protocol.BaseResp
 import rx.Observable
 import javax.inject.Inject
 

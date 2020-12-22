@@ -4,14 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.bawei.base.common.BaseApplication
-import com.bawei.base.injection.component.ActivityComponent
-import com.bawei.base.injection.component.DaggerActivityComponent
-import com.bawei.base.injection.module.ActivityModule
-import com.bawei.base.injection.module.LifecycleProviderModule
 import com.bawei.base.presenter.BasePresenter
 import com.bawei.base.presenter.view.BaseView
 import com.bawei.base.widgets.ProgressLoading
+import com.kotlin.base.injection.component.ActivityComponent
+import com.kotlin.base.injection.component.DaggerActivityComponent
+import com.kotlin.base.injection.module.ActivityModule
+import com.kotlin.base.injection.module.LifecycleProviderModule
+import com.zy.dilib.injection.BaseApplication
 import org.jetbrains.anko.support.v4.toast
 import javax.inject.Inject
 
@@ -27,13 +27,13 @@ abstract open class BaseMvpFragment<T : BasePresenter<*>> : BaseFragment(), Base
 
     private lateinit var mLoadingDialog:ProgressLoading
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         initActivityInjection()
         injectComponent()
 
         //初始加载框
-        mLoadingDialog = ProgressLoading.create(context)
-        return super.onCreateView(inflater, container, savedInstanceState)
+        mLoadingDialog = ProgressLoading.create(context!!)
+        return super.onCreateView(inflater!!, container, savedInstanceState)
     }
 
     /*
@@ -45,8 +45,8 @@ abstract open class BaseMvpFragment<T : BasePresenter<*>> : BaseFragment(), Base
         初始化Activity级别Component
      */
     private fun initActivityInjection() {
-        mActivityComponent = DaggerActivityComponent.builder().appComponent((activity.application as BaseApplication).appComponent)
-                .activityModule(ActivityModule(activity))
+        mActivityComponent = DaggerActivityComponent.builder().appComponent((activity!!.application as com.zy.dilib.injection.BaseApplication).appComponent)
+                .activityModule(ActivityModule(activity!!))
                 .lifecycleProviderModule(LifecycleProviderModule(this))
                 .build()
 

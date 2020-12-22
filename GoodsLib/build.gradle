@@ -37,6 +37,9 @@ android {
 
 dependencies {
 
+    compile project(path: ':CoreLib')
+    compile project(path: ':DILib')
+    compile project(path: ':NetUtilsLib')
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -52,4 +55,6 @@ dependencies {
     compile 'ren.qinc.numberbutton:numberbutton:0.0.1'
     //Jiaozi Player
     compile 'cn.jzvd:jiaozivideoplayer:7.2.0'
+
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }

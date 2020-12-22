@@ -1,10 +1,10 @@
 package com.bawei.user.injection.component
 
-import com.bawei.base.injection.PerComponentScope
-import com.bawei.base.injection.component.ActivityComponent
 import com.bawei.user.injection.module.UploadModule
 import com.bawei.user.injection.module.UserModule
 import com.bawei.user.ui.activity.*
+import com.kotlin.base.injection.PerComponentScope
+import com.kotlin.base.injection.component.ActivityComponent
 import dagger.Component
 
 /*

@@ -28,6 +28,8 @@ android {
 }
 
 dependencies {
+    compile project(path: ':DILib')
+    compile project(path: ':NetUtilsLib')
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -35,6 +37,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     //Android Support
+    //noinspection GradleCompatible
     compile "com.android.support:support-v4:${android_support_version}"
     compile "com.android.support:appcompat-v7:${android_support_version}"
     compile "com.android.support:recyclerview-v7:${android_support_version}"
@@ -50,12 +53,12 @@ dependencies {
     // RxKotlin and RxAndroid
     compile "io.reactivex:rxkotlin:$rx_kotlin_version"
     compile "io.reactivex:rxandroid:${rx_android_version}"
-    //Retrofit
-    compile "com.squareup.okhttp3:okhttp:${ok_http_version}"
-    compile "com.squareup.retrofit2:retrofit:${retrofit_version}"
-    compile "com.squareup.okhttp3:logging-interceptor:${ok_http_version}"
-    compile "com.squareup.retrofit2:converter-gson:${retrofit_version}"
-    compile "com.squareup.retrofit2:adapter-rxjava:${retrofit_version}"
+//    //Retrofit
+//    compile "com.squareup.okhttp3:okhttp:${ok_http_version}"
+//    compile "com.squareup.retrofit2:retrofit:${retrofit_version}"
+//    compile "com.squareup.okhttp3:logging-interceptor:${ok_http_version}"
+//    compile "com.squareup.retrofit2:converter-gson:${retrofit_version}"
+//    compile "com.squareup.retrofit2:adapter-rxjava:${retrofit_version}"
     //Dagger2
     compile "com.google.dagger:dagger:$dagger_version"
     kapt "com.google.dagger:dagger-compiler:$dagger_version"

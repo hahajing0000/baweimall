@@ -1,12 +1,12 @@
 package com.bawei.mall.common
 
 import cn.jpush.android.api.JPushInterface
-import com.bawei.base.common.BaseApplication
+import com.zy.dilib.injection.BaseApplication
 
 /*
     主工程 Application
  */
-class MainApplication:BaseApplication() {
+class MainApplication: com.zy.dilib.injection.BaseApplication() {
     override fun onCreate() {
         super.onCreate()
 

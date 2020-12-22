@@ -1,12 +1,12 @@
 package com.bawei.goods.presenter
 
-import com.bawei.base.data.protocol.BaseResp
 import com.bawei.base.ext.excute
 import com.bawei.base.presenter.BasePresenter
 import com.bawei.base.rx.BaseSubscriber
 import com.bawei.goods.data.protocol.LiveRealInfo
 import com.bawei.goods.presenter.view.LiveInfoView
 import com.bawei.goods.service.LiveInfoService
+import com.bawei.provider.entity.protocol.BaseResp
 import javax.inject.Inject
 
 /**

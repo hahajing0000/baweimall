@@ -1,8 +1,8 @@
 package com.bawei.user.data.respository
 
-import com.bawei.base.data.net.RetrofitFactory
-import com.bawei.base.data.protocol.BaseResp
+import com.bawei.provider.entity.protocol.BaseResp
 import com.bawei.user.data.api.UploadApi
+import com.zy.netutilslib.RetrofitFactory
 import rx.Observable
 import javax.inject.Inject
 

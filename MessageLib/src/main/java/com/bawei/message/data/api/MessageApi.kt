@@ -1,8 +1,8 @@
 package com.bawei.message.data.api
 
 import rx.Observable
-import com.bawei.base.data.protocol.BaseResp
 import com.bawei.message.data.protocol.Message
+import com.bawei.provider.entity.protocol.BaseResp
 import retrofit2.http.POST
 
 /*

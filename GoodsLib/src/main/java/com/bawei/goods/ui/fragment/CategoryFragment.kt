@@ -42,8 +42,8 @@ class CategoryFragment : BaseMvpFragment<CategoryPresenter>(), CategoryView {
         mPresenter.mView = this
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        super.onCreateView(inflater, container, savedInstanceState)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        super.onCreateView(inflater!!, container, savedInstanceState)
         return inflater?.inflate(R.layout.fragment_category, container, false)
     }
 

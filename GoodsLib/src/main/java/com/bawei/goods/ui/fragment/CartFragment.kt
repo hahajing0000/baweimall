@@ -13,7 +13,7 @@ import com.bawei.base.ext.onClick
 import com.bawei.base.ext.setVisible
 import com.bawei.base.ext.startLoading
 import com.bawei.base.ui.fragment.BaseMvpFragment
-import com.bawei.base.utils.AppPrefsUtils
+import com.zy.storagelib.AppPrefsUtils
 import com.bawei.base.utils.YuanFenConverter
 import com.bawei.goods.R
 import com.bawei.goods.common.GoodsConstant
@@ -48,14 +48,14 @@ class CartFragment : BaseMvpFragment<CartListPresenter>(), CartListView {
         mPresenter.mView = this
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        super.onCreateView(inflater, container, savedInstanceState)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        super.onCreateView(inflater!!, container, savedInstanceState)
         return inflater?.inflate(R.layout.fragment_cart, container, false)
     }
 
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view!!, savedInstanceState)
         initView()
         initObserve()
     }
@@ -151,7 +151,7 @@ class CartFragment : BaseMvpFragment<CartListPresenter>(), CartListView {
         }
 
         //本地存储并发送事件刷新UI
-        AppPrefsUtils.putInt(GoodsConstant.SP_CART_SIZE,result?.size?:0)
+        com.zy.storagelib.AppPrefsUtils.putInt(GoodsConstant.SP_CART_SIZE,result?.size?:0)
         Bus.send(UpdateCartSizeEvent())
         //更新总价
         updateTotalPrice()

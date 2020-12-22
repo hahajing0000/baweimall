@@ -1,7 +1,7 @@
 package com.bawei.base.rx
 
 import com.bawei.base.common.ResultCode
-import com.bawei.base.data.protocol.BaseResp
+import com.bawei.provider.entity.protocol.BaseResp
 import rx.Observable
 import rx.functions.Func1
 

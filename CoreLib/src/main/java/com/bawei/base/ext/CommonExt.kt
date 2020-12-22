@@ -7,7 +7,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import com.kennyc.view.MultiStateView
 import com.bawei.base.R
-import com.bawei.base.data.protocol.BaseResp
+import com.bawei.provider.entity.protocol.BaseResp
 import com.bawei.base.rx.BaseFunc
 import com.bawei.base.rx.BaseFuncBoolean
 import com.bawei.base.rx.BaseSubscriber

@@ -1,11 +1,11 @@
 package com.bawei.goods.injection.component
 
-import com.bawei.base.injection.PerComponentScope
-import com.bawei.base.injection.component.ActivityComponent
 import com.bawei.goods.injection.module.CartModule
 import com.bawei.goods.injection.module.GoodsModule
 import com.bawei.goods.ui.activity.GoodsActivity
 import com.bawei.goods.ui.fragment.GoodsDetailTabOneFragment
+import com.kotlin.base.injection.PerComponentScope
+import com.kotlin.base.injection.component.ActivityComponent
 import dagger.Component
 
 /*

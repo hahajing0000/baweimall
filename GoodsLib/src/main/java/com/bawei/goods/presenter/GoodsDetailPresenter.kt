@@ -3,7 +3,7 @@ package com.bawei.goods.presenter
 import com.bawei.base.ext.excute
 import com.bawei.base.presenter.BasePresenter
 import com.bawei.base.rx.BaseSubscriber
-import com.bawei.base.utils.AppPrefsUtils
+import com.zy.storagelib.AppPrefsUtils
 import com.bawei.goods.common.GoodsConstant
 import com.bawei.goods.data.protocol.Goods
 import com.bawei.goods.presenter.view.GoodsDetailView
@@ -50,7 +50,7 @@ class GoodsDetailPresenter @Inject constructor() : BasePresenter<GoodsDetailView
         cartService.addCart(goodsId,goodsDesc,goodsIcon,goodsPrice,
                 goodsCount,goodsSku).excute(object : BaseSubscriber<Int>(mView) {
             override fun onNext(t: Int) {
-                AppPrefsUtils.putInt(GoodsConstant.SP_CART_SIZE,t)
+                com.zy.storagelib.AppPrefsUtils.putInt(GoodsConstant.SP_CART_SIZE,t)
                 mView.onAddCartResult(t)
             }
         }, lifecycleProvider)

@@ -41,13 +41,16 @@ android {
 }
 
 dependencies {
+    compile project(path: ':DILib')
+    compile project(path: ':NetUtilsLib')
+    compile project(path: ':CoreLib')
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     testCompile 'junit:junit:4.12'
 
-    compile project(':CommonLib',)
+    compile project(':CommonLib')
     //Dagger2
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
     //ARouter

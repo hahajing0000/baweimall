@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import com.bawei.base.ext.loadUrl
 import com.bawei.base.ext.onClick
 import com.bawei.base.ui.fragment.BaseFragment
-import com.bawei.base.utils.AppPrefsUtils
+import com.zy.storagelib.AppPrefsUtils
 import com.bawei.mall.R
 import com.bawei.mall.ui.activity.SettingActivity
 import com.bawei.order.common.OrderConstant
@@ -15,8 +15,8 @@ import com.bawei.order.common.OrderStatus
 import com.bawei.order.ui.activity.OrderActivity
 import com.bawei.order.ui.activity.ShipAddressActivity
 import com.bawei.provider.common.ProviderConstant
-import com.bawei.provider.common.afterLogin
-import com.bawei.provider.common.isLogined
+import com.bawei.base.common.afterLogin
+import com.bawei.base.common.isLogined
 import com.bawei.user.ui.activity.UserInfoActivity
 import kotlinx.android.synthetic.main.fragment_me.*
 import org.jetbrains.anko.support.v4.startActivity
@@ -65,12 +65,12 @@ class MeFragment : BaseFragment(), View.OnClickListener {
         加载初始数据
      */
     private fun loadData() {
-        if (isLogined()) {
-            val userIcon = AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_ICON)
+        if (com.bawei.base.common.isLogined()) {
+            val userIcon = com.zy.storagelib.AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_ICON)
             if (userIcon!!.isNotEmpty()) {
                 mUserIconIv.loadUrl(userIcon)
             }
-            mUserNameTv.text = AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_NAME)
+            mUserNameTv.text = com.zy.storagelib.AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_NAME)
         } else {
             mUserIconIv.setImageResource(R.drawable.icon_default_user)
             mUserNameTv.text = getString(R.string.un_login_text)
@@ -84,7 +84,7 @@ class MeFragment : BaseFragment(), View.OnClickListener {
     override fun onClick(view: View) {
         when (view.id) {
             R.id.mUserIconIv, R.id.mUserNameTv -> {
-                afterLogin {
+                com.bawei.base.common.afterLogin {
                     startActivity<UserInfoActivity>()
                 }
             }
@@ -99,13 +99,13 @@ class MeFragment : BaseFragment(), View.OnClickListener {
                 startActivity<OrderActivity>(OrderConstant.KEY_ORDER_STATUS to OrderStatus.ORDER_COMPLETED)
             }
             R.id.mAllOrderTv -> {
-                afterLogin {
+                com.bawei.base.common.afterLogin {
                     startActivity<OrderActivity>()
                 }
             }
 
             R.id.mAddressTv -> {
-                afterLogin {
+                com.bawei.base.common.afterLogin {
                     startActivity<ShipAddressActivity>()
                 }
             }

@@ -1,6 +1,5 @@
 package com.bawei.mall.presenter
 
-import com.bawei.base.data.protocol.BaseResp
 import com.bawei.base.ext.excute
 import com.bawei.base.presenter.BasePresenter
 import com.bawei.base.rx.BaseSubscriber
@@ -8,6 +7,7 @@ import com.bawei.goods.data.protocol.GetGoodsListReq
 import com.bawei.goods.data.protocol.Goods
 import com.bawei.mall.presenter.view.GoodsInfoView
 import com.bawei.mall.service.GoodsInfoService
+import com.bawei.provider.entity.protocol.BaseResp
 import javax.inject.Inject
 
 /**

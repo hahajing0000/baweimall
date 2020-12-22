@@ -1,7 +1,7 @@
 package com.bawei.goods.data.api
 
-import com.bawei.base.data.protocol.BaseResp
 import com.bawei.goods.data.protocol.*
+import com.bawei.provider.entity.protocol.BaseResp
 import retrofit2.http.Body
 import retrofit2.http.POST
 import rx.Observable

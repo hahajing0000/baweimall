@@ -7,13 +7,13 @@ import com.eightbitlab.rxbus.Bus
 import com.eightbitlab.rxbus.registerInBus
 import com.bawei.base.ext.onClick
 import com.bawei.base.ui.activity.BaseActivity
-import com.bawei.base.utils.AppPrefsUtils
+import com.zy.storagelib.AppPrefsUtils
 import com.bawei.goods.R
 import com.bawei.goods.common.GoodsConstant
 import com.bawei.goods.event.AddCartEvent
 import com.bawei.goods.event.UpdateCartSizeEvent
 import com.bawei.goods.ui.adapter.GoodsDetailVpAdapter
-import com.bawei.provider.common.afterLogin
+import com.bawei.base.common.afterLogin
 import kotlinx.android.synthetic.main.activity_goods_detail.*
 import org.jetbrains.anko.startActivity
 import q.rorbin.badgeview.QBadgeView
@@ -43,7 +43,7 @@ class GoodsDetailActivity:BaseActivity() {
         mGoodsDetailTab.setupWithViewPager(mGoodsDetailVp)
 
         mAddCartBtn.onClick {
-            afterLogin {
+            com.bawei.base.common.afterLogin {
                 Bus.send(AddCartEvent())
             }
         }
@@ -83,7 +83,7 @@ class GoodsDetailActivity:BaseActivity() {
         mCartBdage.badgeGravity = Gravity.END or Gravity.TOP
         mCartBdage.setGravityOffset(22f,-2f,true)
         mCartBdage.setBadgeTextSize(6f,true)
-        mCartBdage.bindTarget(mEnterCartTv).badgeNumber = AppPrefsUtils.getInt(GoodsConstant.SP_CART_SIZE)
+        mCartBdage.bindTarget(mEnterCartTv).badgeNumber = com.zy.storagelib.AppPrefsUtils.getInt(GoodsConstant.SP_CART_SIZE)
 
     }
 

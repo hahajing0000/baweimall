@@ -1,8 +1,7 @@
 package com.bawei.user.utils
 
-import com.bawei.base.common.BaseConstant
+import com.bawei.provider.common.BaseConstant
 import com.bawei.provider.common.ProviderConstant
-import com.bawei.base.utils.AppPrefsUtils
 import com.bawei.user.data.protocol.UserInfo
 
 /*
@@ -14,11 +13,11 @@ object UserPrefsUtils {
         退出登录时，传入null,清空存储
      */
     fun putUserInfo(userInfo: UserInfo?) {
-        AppPrefsUtils.putString(BaseConstant.KEY_SP_TOKEN, userInfo?.id ?: "")
-        AppPrefsUtils.putString(ProviderConstant.KEY_SP_USER_ICON, userInfo?.userIcon ?: "")
-        AppPrefsUtils.putString(ProviderConstant.KEY_SP_USER_NAME, userInfo?.userName ?: "")
-        AppPrefsUtils.putString(ProviderConstant.KEY_SP_USER_MOBILE, userInfo?.userMobile ?: "")
-        AppPrefsUtils.putString(ProviderConstant.KEY_SP_USER_GENDER, userInfo?.userGender ?: "")
-        AppPrefsUtils.putString(ProviderConstant.KEY_SP_USER_SIGN, userInfo?.userSign ?: "")
+        com.zy.storagelib.AppPrefsUtils.putString(BaseConstant.KEY_SP_TOKEN, userInfo?.id ?: "")
+        com.zy.storagelib.AppPrefsUtils.putString(ProviderConstant.KEY_SP_USER_ICON, userInfo?.userIcon ?: "")
+        com.zy.storagelib.AppPrefsUtils.putString(ProviderConstant.KEY_SP_USER_NAME, userInfo?.userName ?: "")
+        com.zy.storagelib.AppPrefsUtils.putString(ProviderConstant.KEY_SP_USER_MOBILE, userInfo?.userMobile ?: "")
+        com.zy.storagelib.AppPrefsUtils.putString(ProviderConstant.KEY_SP_USER_GENDER, userInfo?.userGender ?: "")
+        com.zy.storagelib.AppPrefsUtils.putString(ProviderConstant.KEY_SP_USER_SIGN, userInfo?.userSign ?: "")
     }
 }

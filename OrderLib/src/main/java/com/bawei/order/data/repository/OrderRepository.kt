@@ -5,13 +5,13 @@ import javax.inject.Inject
 import rx.Observable
 import com.bawei.order.data.protocol.SubmitOrderReq
 import com.bawei.order.data.api.OrderApi
-import com.bawei.base.data.net.RetrofitFactory
 import com.bawei.order.data.protocol.Order
-import com.bawei.base.data.protocol.BaseResp
 import com.bawei.order.data.protocol.GetOrderListReq
 import com.bawei.order.data.protocol.GetOrderByIdReq
 import com.bawei.order.data.protocol.ConfirmOrderReq
 import com.bawei.order.data.protocol.CancelOrderReq
+import com.bawei.provider.entity.protocol.BaseResp
+import com.zy.netutilslib.RetrofitFactory
 
 /*
    订单数据层

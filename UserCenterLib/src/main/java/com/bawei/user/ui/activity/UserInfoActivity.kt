@@ -3,10 +3,9 @@ package com.bawei.user.ui.activity
 import android.os.Bundle
 import android.util.Log
 import com.jph.takephoto.model.TResult
-import com.bawei.base.common.BaseConstant
+import com.bawei.provider.common.BaseConstant
 import com.bawei.base.ext.onClick
 import com.bawei.base.ui.activity.BaseTakePhotoActivity
-import com.bawei.base.utils.AppPrefsUtils
 import com.bawei.base.utils.GlideUtils
 import com.bawei.provider.common.ProviderConstant
 import com.bawei.user.R
@@ -70,11 +69,11 @@ class UserInfoActivity : BaseTakePhotoActivity<UserInfoPresenter>(), UserInfoVie
         初始化数据
      */
     private fun initData() {
-        mUserIcon = AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_ICON)
-        mUserName = AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_NAME)
-        mUserMobile = AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_MOBILE)
-        mUserGender = AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_GENDER)
-        mUserSign = AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_SIGN)
+        mUserIcon = com.zy.storagelib.AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_ICON)
+        mUserName = com.zy.storagelib.AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_NAME)
+        mUserMobile = com.zy.storagelib.AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_MOBILE)
+        mUserGender = com.zy.storagelib.AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_GENDER)
+        mUserSign = com.zy.storagelib.AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_SIGN)
 
         mRemoteFileUrl = mUserIcon
         if (mUserIcon != ""){

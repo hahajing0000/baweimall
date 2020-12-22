@@ -12,15 +12,14 @@ import com.jph.takephoto.app.TakePhoto
 import com.jph.takephoto.app.TakePhotoImpl
 import com.jph.takephoto.compress.CompressConfig
 import com.jph.takephoto.model.TResult
-import com.bawei.base.common.BaseApplication
-import com.bawei.base.injection.component.ActivityComponent
-import com.bawei.base.injection.component.DaggerActivityComponent
-import com.bawei.base.injection.module.ActivityModule
-import com.bawei.base.injection.module.LifecycleProviderModule
 import com.bawei.base.presenter.BasePresenter
 import com.bawei.base.presenter.view.BaseView
 import com.bawei.base.utils.DateUtils
 import com.bawei.base.widgets.ProgressLoading
+import com.kotlin.base.injection.component.ActivityComponent
+import com.kotlin.base.injection.component.DaggerActivityComponent
+import com.kotlin.base.injection.module.ActivityModule
+import com.kotlin.base.injection.module.LifecycleProviderModule
 import org.jetbrains.anko.toast
 import java.io.File
 import javax.inject.Inject
@@ -62,7 +61,7 @@ abstract open class BaseTakePhotoActivity<T : BasePresenter<*>> : BaseActivity()
         初始化Activity Component
      */
     private fun initActivityInjection() {
-        mActivityComponent = DaggerActivityComponent.builder().appComponent((application as BaseApplication).appComponent)
+        mActivityComponent = DaggerActivityComponent.builder().appComponent((application as com.zy.dilib.injection.BaseApplication).appComponent)
                 .activityModule(ActivityModule(this))
                 .lifecycleProviderModule(LifecycleProviderModule(this))
                 .build()

@@ -1,10 +1,10 @@
 package com.bawei.order.injection.component
 
-import com.bawei.base.injection.PerComponentScope
-import com.bawei.base.injection.component.ActivityComponent
 import com.bawei.order.injection.module.ShipAddressModule
 import com.bawei.order.ui.activity.ShipAddressActivity
 import com.bawei.order.ui.activity.ShipAddressEditActivity
+import com.kotlin.base.injection.PerComponentScope
+import com.kotlin.base.injection.component.ActivityComponent
 import dagger.Component
 
 /*

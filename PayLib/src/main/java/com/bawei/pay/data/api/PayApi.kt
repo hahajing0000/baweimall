@@ -2,9 +2,9 @@ package com.bawei.pay.data.api
 
 import retrofit2.http.Body
 import rx.Observable
-import com.bawei.base.data.protocol.BaseResp
 import com.bawei.pay.data.protocol.GetPaySignReq
 import com.bawei.pay.data.protocol.PayOrderReq
+import com.bawei.provider.entity.protocol.BaseResp
 import retrofit2.http.POST
 
 

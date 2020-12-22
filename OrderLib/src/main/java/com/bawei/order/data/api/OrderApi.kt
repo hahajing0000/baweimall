@@ -2,9 +2,9 @@ package com.bawei.order.data.api
 
 import retrofit2.http.Body
 import rx.Observable
-import com.bawei.base.data.protocol.BaseResp
 import com.bawei.order.data.protocol.*
 import com.bawei.order.data.protocol.Order
+import com.bawei.provider.entity.protocol.BaseResp
 import retrofit2.http.POST
 
 

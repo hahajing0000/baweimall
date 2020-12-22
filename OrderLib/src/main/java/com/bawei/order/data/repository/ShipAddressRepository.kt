@@ -1,7 +1,5 @@
 package com.bawei.order.data.repository
 
-import com.bawei.base.data.net.RetrofitFactory
-import com.bawei.base.data.protocol.BaseResp
 import com.bawei.order.data.api.ShipAddressApi
 import javax.inject.Inject
 import rx.Observable
@@ -9,6 +7,8 @@ import com.bawei.order.data.protocol.ShipAddress
 import com.bawei.order.data.protocol.EditShipAddressReq
 import com.bawei.order.data.protocol.DeleteShipAddressReq
 import com.bawei.order.data.protocol.AddShipAddressReq
+import com.bawei.provider.entity.protocol.BaseResp
+import com.zy.netutilslib.RetrofitFactory
 
 
 /*

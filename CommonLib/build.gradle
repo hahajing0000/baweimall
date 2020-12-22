@@ -1,5 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion compile_sdk_version
@@ -33,8 +35,22 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     testCompile 'junit:junit:4.12'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    // Anko Commons
+    compile "org.jetbrains.anko:anko-commons:$anko_version"
+    //ARouter
+    compile "com.alibaba:arouter-api:$arouter_api_version"
 
-    compile project(':CoreLib')
+    // RxKotlin and RxAndroid
+    compile "io.reactivex:rxkotlin:$rx_kotlin_version"
+    compile "io.reactivex:rxandroid:${rx_android_version}"
+    //Retrofit
+    compile "com.squareup.okhttp3:okhttp:${ok_http_version}"
+    compile "com.squareup.retrofit2:retrofit:${retrofit_version}"
+    compile "com.squareup.okhttp3:logging-interceptor:${ok_http_version}"
+    compile "com.squareup.retrofit2:converter-gson:${retrofit_version}"
+    compile "com.squareup.retrofit2:adapter-rxjava:${retrofit_version}"
+
 }
 repositories {
     mavenCentral()

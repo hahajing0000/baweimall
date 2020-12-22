@@ -1,9 +1,9 @@
 package com.bawei.goods.data.repository
 
-import com.bawei.base.data.net.RetrofitFactory
-import com.bawei.base.data.protocol.BaseResp
 import com.bawei.goods.data.api.CartApi
 import com.bawei.goods.data.protocol.*
+import com.bawei.provider.entity.protocol.BaseResp
+import com.zy.netutilslib.RetrofitFactory
 
 import javax.inject.Inject
 

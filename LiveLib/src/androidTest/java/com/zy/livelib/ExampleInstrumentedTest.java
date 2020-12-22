@@ -1,4 +1,4 @@
-package com.zy.imglib;
+package com.zy.livelib;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -20,6 +20,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.zy.imglib.test", appContext.getPackageName());
+        assertEquals("com.zy.livelib.test", appContext.getPackageName());
     }
 }

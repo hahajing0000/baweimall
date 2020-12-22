@@ -1,5 +1,5 @@
+include ':LiveLib'
 include ':DILib'
 include ':StorageLib'
 include ':NetUtilsLib'
-include ':ImgLib'
 include 'Host', ':CoreLib', ':CommonLib', ':UserCenterLib', ':MessageLib', ':GoodsLib', ':OrderLib', ':PayLib'

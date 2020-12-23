@@ -37,6 +37,7 @@ android {
 
 dependencies {
 
+    compile project(path: ':IMLib')
     compile project(path: ':CoreLib')
     compile project(path: ':DILib')
     compile project(path: ':NetUtilsLib')

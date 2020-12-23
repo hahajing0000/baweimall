@@ -16,6 +16,9 @@ import com.bawei.user.injection.module.UserModule
 import com.bawei.user.presenter.LoginPresenter
 import com.bawei.user.presenter.view.LoginView
 import com.bawei.user.utils.UserPrefsUtils
+import com.hyphenate.EMCallBack
+import com.hyphenate.chat.EMClient
+import com.hyphenate.chat.adapter.EMACallback
 import kotlinx.android.synthetic.main.activity_login.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
@@ -68,6 +71,16 @@ class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView, View.OnClick
 
             R.id.mLoginBtn -> {
                 mPresenter.login(mMobileEt.text.toString(),mPwdEt.text.toString(),mPushProvider?.getPushId()?:"")
+                EMClient.getInstance().login(mMobileEt.text.toString(),mPwdEt.text.toString(),object: EMCallBack {
+                    override fun onSuccess() {
+                    }
+
+                    override fun onProgress(p0: Int, p1: String?) {
+                    }
+
+                    override fun onError(p0: Int, p1: String?) {
+                    }
+                })
             }
             R.id.mForgetPwdTv ->{
                 startActivity<ForgetPwdActivity>()

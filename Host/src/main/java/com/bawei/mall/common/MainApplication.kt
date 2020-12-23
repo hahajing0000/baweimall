@@ -1,6 +1,9 @@
 package com.bawei.mall.common
 
+import android.support.multidex.MultiDex
 import cn.jpush.android.api.JPushInterface
+import com.hyphenate.chat.EMOptions
+import com.hyphenate.easeui.EaseUI
 import com.zy.dilib.injection.BaseApplication
 import com.zy.livelib.push.LiveEnv
 
@@ -15,6 +18,14 @@ class MainApplication: com.zy.dilib.injection.BaseApplication() {
         JPushInterface.setDebugMode(true)
         JPushInterface.init(this)
 
+        //IM初始化
+        val optoins:EMOptions= EMOptions()
+        optoins.acceptInvitationAlways=false
+        EaseUI.getInstance().init(this,optoins)
+
+
+        //多dex支持
+        MultiDex.install(this.applicationContext);
         /**
          * 初始化腾讯云直播
          */

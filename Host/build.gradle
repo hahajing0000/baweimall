@@ -17,6 +17,9 @@ android {
         manifestPlaceholders = [
                 JPUSH_PKGNAME : applicationId
         ]
+
+        //开启多DEX方案
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -36,6 +39,7 @@ android {
 }
 
 dependencies {
+    compile project(path: ':IMLib')
     compile project(path: ':LiveLib')
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -60,6 +64,8 @@ dependencies {
     compile project(':PayLib')
     compile project(path: ':DILib')
     compile project(path: ':CoreLib')
+
+
 
     //Dagger2
     kapt "com.google.dagger:dagger-compiler:$dagger_version"

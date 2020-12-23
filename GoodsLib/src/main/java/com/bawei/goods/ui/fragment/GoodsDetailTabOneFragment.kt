@@ -48,7 +48,7 @@ class GoodsDetailTabOneFragment : BaseMvpFragment<GoodsDetailPresenter>(), Goods
         return inflater?.inflate(R.layout.fragment_goods_detail_tab_one, container, false)
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
         initAnim()
@@ -96,7 +96,7 @@ class GoodsDetailTabOneFragment : BaseMvpFragment<GoodsDetailPresenter>(), Goods
         初始化sku弹层
      */
     private fun initSkuPop() {
-        mSkuPop = GoodsSkuPopView(activity)
+        mSkuPop = GoodsSkuPopView(activity!!)
         mSkuPop.setOnDismissListener{
             (activity as BaseActivity).contentView.startAnimation(mAnimationEnd)
         }
@@ -106,7 +106,7 @@ class GoodsDetailTabOneFragment : BaseMvpFragment<GoodsDetailPresenter>(), Goods
         加载数据
      */
     private fun loadData() {
-        mPresenter.getGoodsDetailList(activity.intent.getIntExtra(GoodsConstant.KEY_GOODS_ID, -1))
+        mPresenter.getGoodsDetailList(activity!!.intent.getIntExtra(GoodsConstant.KEY_GOODS_ID, -1))
     }
 
     /*

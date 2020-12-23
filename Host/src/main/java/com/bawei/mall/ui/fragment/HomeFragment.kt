@@ -44,7 +44,9 @@ class HomeFragment:BaseMvpFragment<GoodsInfoPresenter>(),GoodsInfoView {
         return inflater?.inflate(R.layout.fragment_home,null)
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
         initBanner()
@@ -106,7 +108,7 @@ class HomeFragment:BaseMvpFragment<GoodsInfoPresenter>(),GoodsInfoView {
         manager.orientation = LinearLayoutManager.HORIZONTAL
         mHomeDiscountRv.layoutManager = manager
 
-        val discountAdapter  = HomeDiscountAdapter(activity)
+        val discountAdapter  = HomeDiscountAdapter(activity!!)
         mHomeDiscountRv.adapter = discountAdapter
         discountAdapter.setData(mutableListOf(HOME_DISCOUNT_ONE, HOME_DISCOUNT_TWO, HOME_DISCOUNT_THREE, HOME_DISCOUNT_FOUR, HOME_DISCOUNT_FIVE,HOME_DISCOUNT_SIX, HOME_DISCOUNT_SEVEN))
     }
@@ -116,7 +118,7 @@ class HomeFragment:BaseMvpFragment<GoodsInfoPresenter>(),GoodsInfoView {
      */
     private fun initTopic(){
         //话题
-        mTopicPager.adapter = TopicAdapter(context, listOf(HOME_TOPIC_ONE, HOME_TOPIC_TWO, HOME_TOPIC_THREE, HOME_TOPIC_FOUR, HOME_TOPIC_FIVE))
+        mTopicPager.adapter = TopicAdapter(context!!, listOf(HOME_TOPIC_ONE, HOME_TOPIC_TWO, HOME_TOPIC_THREE, HOME_TOPIC_FOUR, HOME_TOPIC_FIVE))
         mTopicPager.currentItem = 1
         mTopicPager.offscreenPageLimit = 5
 
@@ -130,7 +132,7 @@ class HomeFragment:BaseMvpFragment<GoodsInfoPresenter>(),GoodsInfoView {
 //        mHomeGoodsList.adapter
         val manager=GridLayoutManager(context,2)
         mHomeGoodsList.layoutManager=manager
-        goodsListAdapter=RecommendAdapter(activity)
+        goodsListAdapter=RecommendAdapter(activity!!)
         mHomeGoodsList.adapter=goodsListAdapter
 
         mPresenter.getGoodsInfo(GetGoodsListReq(14,1))

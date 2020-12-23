@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- 主题样式 -->
-    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppThemeNew" parent="@style/Theme.AppCompat.Light.DarkActionBar">
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:textSize">@dimen/text_middle_size</item>
         <item name="windowActionBar">false</item>
@@ -11,7 +11,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <!-- Window黑色背景主题 -->
-    <style name="AppTheme.Black" parent="@style/AppTheme">
+    <style name="AppTheme.Black" parent="@style/AppThemeNew">
         <item name="android:windowBackground">@color/common_black</item>
     </style>
 

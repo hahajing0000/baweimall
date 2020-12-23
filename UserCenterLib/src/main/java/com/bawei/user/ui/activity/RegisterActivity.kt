@@ -10,8 +10,10 @@ import com.bawei.user.injection.component.DaggerUserComponent
 import com.bawei.user.injection.module.UserModule
 import com.bawei.user.presenter.RegisterPresenter
 import com.bawei.user.presenter.view.RegisterView
+import com.hyphenate.chat.EMClient
 import kotlinx.android.synthetic.main.activity_register.*
 import org.jetbrains.anko.toast
+import java.util.concurrent.Executors
 
 /*
     注册界面
@@ -69,6 +71,11 @@ class RegisterActivity : BaseMvpActivity<RegisterPresenter>(),RegisterView,View.
 
             R.id.mRegisterBtn -> {
                 mPresenter.register(mMobileEt.text.toString(),mPwdEt.text.toString(),mVerifyCodeEt.text.toString())
+                Executors.newCachedThreadPool().submit(object:Runnable{
+                    override fun run() {
+                        EMClient.getInstance().createAccount(mMobileEt.text.toString(),mPwdEt.text.toString())
+                    }
+                })
             }
         }
     }

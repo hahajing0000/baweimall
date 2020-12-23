@@ -47,7 +47,7 @@ class OrderFragment:BaseMvpFragment<OrderListPresenter>(),OrderListView {
         return inflater?.inflate(R.layout.fragment_order,container,false)
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
     }
@@ -62,7 +62,7 @@ class OrderFragment:BaseMvpFragment<OrderListPresenter>(),OrderListView {
      */
     private fun initView() {
         mOrderRv.layoutManager = LinearLayoutManager(activity)
-        mAdapter = OrderAdapter(activity)
+        mAdapter = OrderAdapter(activity!!)
         mOrderRv.adapter = mAdapter
 
         /*
@@ -118,7 +118,7 @@ class OrderFragment:BaseMvpFragment<OrderListPresenter>(),OrderListView {
      */
     private fun loadData() {
         mMultiStateView.startLoading()
-        mPresenter.getOrderList(arguments.getInt(OrderConstant.KEY_ORDER_STATUS,-1))
+        mPresenter.getOrderList(arguments!!.getInt(OrderConstant.KEY_ORDER_STATUS,-1))
     }
 
     /*

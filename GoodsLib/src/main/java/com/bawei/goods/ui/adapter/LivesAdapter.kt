@@ -33,7 +33,7 @@ class LivesAdapter(context:Context) : BaseRecyclerViewAdapter<LiveRealInfo, Live
         holder.itemView.mLiveListCountTv.text= (0..10000).random().toString()+" 人正在观看"
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflate = LayoutInflater.from(mContext).inflate(R.layout.item_livelist, parent, false)
         return ViewHolder(inflate)
     }

@@ -40,7 +40,7 @@ class RecommendAdapter(context: Context):BaseRecyclerViewAdapter<Goods,Recommend
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflate = LayoutInflater.from(mContext).inflate(R.layout.layout_goods_item, parent, false)
         return ViewHolder(inflate)
     }

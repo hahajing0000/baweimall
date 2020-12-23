@@ -73,7 +73,7 @@ class CartFragment : BaseMvpFragment<CartListPresenter>(), CartListView {
      */
     private fun initView() {
         mCartGoodsRv.layoutManager = LinearLayoutManager(context)
-        mAdapter = CartGoodsAdapter(context)
+        mAdapter = CartGoodsAdapter(context!!)
         mCartGoodsRv.adapter = mAdapter
 
         mHeaderBar.getRightView().onClick {

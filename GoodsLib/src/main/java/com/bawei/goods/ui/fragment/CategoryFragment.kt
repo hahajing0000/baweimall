@@ -48,7 +48,7 @@ class CategoryFragment : BaseMvpFragment<CategoryPresenter>(), CategoryView {
     }
 
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
         loadData()
@@ -60,7 +60,7 @@ class CategoryFragment : BaseMvpFragment<CategoryPresenter>(), CategoryView {
     private fun initView() {
 
         mTopCategoryRv.layoutManager = LinearLayoutManager(context)
-        topAdapter = TopCategoryAdapter(context)
+        topAdapter = TopCategoryAdapter(context!!)
         mTopCategoryRv.adapter = topAdapter
         //单项点击事件
         topAdapter.setOnItemClickListener(object : BaseRecyclerViewAdapter.OnItemClickListener<Category> {
@@ -75,7 +75,7 @@ class CategoryFragment : BaseMvpFragment<CategoryPresenter>(), CategoryView {
         })
 
         mSecondCategoryRv.layoutManager = GridLayoutManager(context, 3)
-        secondAdapter = SecondCategoryAdapter(context)
+        secondAdapter = SecondCategoryAdapter(context!!)
         mSecondCategoryRv.adapter = secondAdapter
         secondAdapter.setOnItemClickListener(object : BaseRecyclerViewAdapter.OnItemClickListener<Category> {
             override fun onItemClick(item: Category, position: Int) {

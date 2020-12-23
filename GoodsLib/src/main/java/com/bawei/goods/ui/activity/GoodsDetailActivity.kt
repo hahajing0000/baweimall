@@ -18,6 +18,7 @@ import com.bawei.goods.event.AddCartEvent
 import com.bawei.goods.event.UpdateCartSizeEvent
 import com.bawei.goods.ui.adapter.GoodsDetailVpAdapter
 import com.bawei.base.common.afterLogin
+import com.hyphenate.easeui.ui.ChatActivity
 import kotlinx.android.synthetic.main.activity_goods_detail.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
@@ -86,7 +87,7 @@ class GoodsDetailActivity:BaseActivity() {
         }
 
         mImTv.onClick {
-            toast("呼叫店小二")
+            startActivity<ChatActivity>("user" to "店小二")
         }
 
         mCartBdage = QBadgeView(this)

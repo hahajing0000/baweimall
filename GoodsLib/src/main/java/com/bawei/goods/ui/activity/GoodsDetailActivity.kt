@@ -23,6 +23,7 @@ import kotlinx.android.synthetic.main.activity_goods_detail.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 import q.rorbin.badgeview.QBadgeView
+import java.lang.RuntimeException
 
 /*
     商品详情 Activity
@@ -67,6 +68,8 @@ class GoodsDetailActivity:BaseActivity() {
             初始化视图
          */
     private fun initView() {
+//        throw RuntimeException("一个测试用的运行时异常")
+
         mGoodsDetailTab.tabMode = TabLayout.MODE_FIXED
         mGoodsDetailVp.adapter = GoodsDetailVpAdapter(supportFragmentManager,this)
         //TabLayout关联ViewPager

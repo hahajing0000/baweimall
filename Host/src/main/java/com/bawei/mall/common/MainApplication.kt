@@ -2,8 +2,10 @@ package com.bawei.mall.common
 
 import android.support.multidex.MultiDex
 import cn.jpush.android.api.JPushInterface
+import com.bawei.mall.BuildConfig
 import com.hyphenate.chat.EMOptions
 import com.hyphenate.easeui.EaseUI
+import com.tencent.bugly.crashreport.CrashReport
 import com.zy.dilib.injection.BaseApplication
 import com.zy.livelib.push.LiveEnv
 
@@ -26,6 +28,10 @@ class MainApplication: com.zy.dilib.injection.BaseApplication() {
 
         //多dex支持
         MultiDex.install(this.applicationContext);
+
+
+        //Bugly异常上报
+        CrashReport.initCrashReport(getApplicationContext(), "039ee77ca9", BuildConfig.DEBUG);
         /**
          * 初始化腾讯云直播
          */

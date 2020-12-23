@@ -6,6 +6,8 @@ import com.bawei.mall.BuildConfig
 import com.hyphenate.chat.EMOptions
 import com.hyphenate.easeui.EaseUI
 import com.tencent.bugly.crashreport.CrashReport
+import com.umeng.analytics.MobclickAgent
+import com.umeng.commonsdk.UMConfigure
 import com.zy.dilib.injection.BaseApplication
 import com.zy.livelib.push.LiveEnv
 
@@ -32,6 +34,11 @@ class MainApplication: com.zy.dilib.injection.BaseApplication() {
 
         //Bugly异常上报
         CrashReport.initCrashReport(getApplicationContext(), "039ee77ca9", BuildConfig.DEBUG);
+
+        //友盟统计
+        UMConfigure.init(this, "5fe32ad7d1c1ad39854eaee9", "Umeng", UMConfigure.DEVICE_TYPE_PHONE, "");
+        //自动采集
+        MobclickAgent.setPageCollectionMode(MobclickAgent.PageMode.AUTO);
         /**
          * 初始化腾讯云直播
          */

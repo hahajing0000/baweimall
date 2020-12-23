@@ -74,7 +74,9 @@ dependencies {
     compile 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
     compile 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
 
-
+    compile "com.umeng.umsdk:common:9.1.0" //（必选）
+    compile "com.umeng.umsdk:asms:1.1.3" // asms包依赖(必选)
+    compile "com.umeng.umsdk:crash:0.0.4" // native crash包依赖(必选)
 
     //Dagger2
     kapt "com.google.dagger:dagger-compiler:$dagger_version"

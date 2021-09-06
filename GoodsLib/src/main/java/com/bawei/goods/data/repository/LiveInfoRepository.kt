@@ -3,7 +3,7 @@ package com.bawei.goods.data.repository
 import com.bawei.goods.data.api.LiveApi
 import com.bawei.goods.data.protocol.LiveRealInfo
 import com.bawei.provider.entity.protocol.BaseResp
-import com.zy.netutilslib.RetrofitFactory
+import com.bawei.netutilslib.RetrofitFactory
 import rx.Observable
 import javax.inject.Inject
 

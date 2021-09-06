@@ -3,7 +3,6 @@ package com.bawei.goods.ui.activity
 import android.animation.Animator
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
-import android.animation.ValueAnimator
 import android.os.Bundle
 import android.support.design.widget.TabLayout
 import android.view.Gravity
@@ -11,19 +10,15 @@ import com.eightbitlab.rxbus.Bus
 import com.eightbitlab.rxbus.registerInBus
 import com.bawei.base.ext.onClick
 import com.bawei.base.ui.activity.BaseActivity
-import com.zy.storagelib.AppPrefsUtils
 import com.bawei.goods.R
 import com.bawei.goods.common.GoodsConstant
 import com.bawei.goods.event.AddCartEvent
 import com.bawei.goods.event.UpdateCartSizeEvent
 import com.bawei.goods.ui.adapter.GoodsDetailVpAdapter
-import com.bawei.base.common.afterLogin
 import com.hyphenate.easeui.ui.ChatActivity
 import kotlinx.android.synthetic.main.activity_goods_detail.*
 import org.jetbrains.anko.startActivity
-import org.jetbrains.anko.toast
 import q.rorbin.badgeview.QBadgeView
-import java.lang.RuntimeException
 
 /*
     商品详情 Activity
@@ -120,7 +115,7 @@ class GoodsDetailActivity:BaseActivity() {
         mCartBdage.badgeGravity = Gravity.END or Gravity.TOP
         mCartBdage.setGravityOffset(22f,-2f,true)
         mCartBdage.setBadgeTextSize(6f,true)
-        mCartBdage.bindTarget(mEnterCartTv).badgeNumber = com.zy.storagelib.AppPrefsUtils.getInt(GoodsConstant.SP_CART_SIZE)
+        mCartBdage.bindTarget(mEnterCartTv).badgeNumber = com.bawei.storagelib.AppPrefsUtils.getInt(GoodsConstant.SP_CART_SIZE)
 
     }
 

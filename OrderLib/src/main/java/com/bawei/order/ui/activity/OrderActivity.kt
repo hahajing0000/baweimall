@@ -19,6 +19,8 @@ class OrderActivity:BaseActivity() {
         setContentView(R.layout.activity_order)
 
         initView()
+
+
     }
 
     /*

@@ -4,7 +4,7 @@ import com.bawei.goods.data.protocol.GetGoodsListReq
 import com.bawei.goods.data.protocol.Goods
 import com.bawei.mall.data.api.GoodsInfoApi
 import com.bawei.provider.entity.protocol.BaseResp
-import com.zy.netutilslib.RetrofitFactory
+import com.bawei.netutilslib.RetrofitFactory
 import rx.Observable
 import javax.inject.Inject
 

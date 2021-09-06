@@ -27,6 +27,13 @@ interface ShipAddressApi {
     @POST("shipAddress/delete")
     fun deleteShipAddress(@Body req: DeleteShipAddressReq): Observable<BaseResp<String>>
 
+
+    /*
+       hhhhh
+    */
+    @POST("shipAddress/is")
+    fun delll(@Body req: DeleteShipAddressReq): Observable<BaseResp<String>>
+
     /*
         修改收货地址
      */

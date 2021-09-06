@@ -3,7 +3,7 @@ package com.bawei.base.common
 import com.alibaba.android.arouter.launcher.ARouter
 import com.bawei.provider.common.BaseConstant
 import com.bawei.provider.router.RouterPath
-import com.zy.storagelib.AppPrefsUtils
+import com.bawei.storagelib.AppPrefsUtils
 
 /*
     顶级函数，判断是否登录

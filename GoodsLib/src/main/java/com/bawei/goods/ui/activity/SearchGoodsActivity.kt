@@ -7,7 +7,6 @@ import com.bawei.base.ext.onClick
 import com.bawei.base.ext.setVisible
 import com.bawei.base.ui.activity.BaseActivity
 import com.bawei.base.ui.adapter.BaseRecyclerViewAdapter
-import com.zy.storagelib.AppPrefsUtils
 import com.bawei.goods.R
 
 import com.bawei.goods.common.GoodsConstant
@@ -57,7 +56,7 @@ class SearchGoodsActivity : BaseActivity(), View.OnClickListener {
         从SP中加载数据
      */
     private fun loadData() {
-        val set = com.zy.storagelib.AppPrefsUtils.getStringSet(GoodsConstant.SP_SEARCH_HISTORY)
+        val set = com.bawei.storagelib.AppPrefsUtils.getStringSet(GoodsConstant.SP_SEARCH_HISTORY)
         mNoDataTv.setVisible(set!!.isEmpty())
         mDataView.setVisible(set.isNotEmpty())
         if (set.isNotEmpty()) {
@@ -74,7 +73,7 @@ class SearchGoodsActivity : BaseActivity(), View.OnClickListener {
             R.id.mSearchTv -> doSearch()
             //清除历史记录
             R.id.mClearBtn -> {
-                com.zy.storagelib.AppPrefsUtils.remove(GoodsConstant.SP_SEARCH_HISTORY)
+                com.bawei.storagelib.AppPrefsUtils.remove(GoodsConstant.SP_SEARCH_HISTORY)
                 loadData()
             }
         }
@@ -86,7 +85,7 @@ class SearchGoodsActivity : BaseActivity(), View.OnClickListener {
             toast("请输入需要搜索的关键字")
         } else {
             val inputValue = mKeywordEt.text.toString()
-            com.zy.storagelib.AppPrefsUtils.putStringSet(GoodsConstant.SP_SEARCH_HISTORY, mutableSetOf(inputValue))
+            com.bawei.storagelib.AppPrefsUtils.putStringSet(GoodsConstant.SP_SEARCH_HISTORY, mutableSetOf(inputValue))
             enterGoodsList(inputValue)
         }
     }

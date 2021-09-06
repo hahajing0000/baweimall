@@ -3,7 +3,7 @@ package com.bawei.goods.data.repository
 import com.bawei.goods.data.api.CartApi
 import com.bawei.goods.data.protocol.*
 import com.bawei.provider.entity.protocol.BaseResp
-import com.zy.netutilslib.RetrofitFactory
+import com.bawei.netutilslib.RetrofitFactory
 
 import javax.inject.Inject
 

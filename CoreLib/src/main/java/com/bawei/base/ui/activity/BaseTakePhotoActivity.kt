@@ -61,7 +61,7 @@ abstract open class BaseTakePhotoActivity<T : BasePresenter<*>> : BaseActivity()
         初始化Activity Component
      */
     private fun initActivityInjection() {
-        mActivityComponent = DaggerActivityComponent.builder().appComponent((application as com.zy.dilib.injection.BaseApplication).appComponent)
+        mActivityComponent = DaggerActivityComponent.builder().appComponent((application as com.bawei.dilib.injection.BaseApplication).appComponent)
                 .activityModule(ActivityModule(this))
                 .lifecycleProviderModule(LifecycleProviderModule(this))
                 .build()

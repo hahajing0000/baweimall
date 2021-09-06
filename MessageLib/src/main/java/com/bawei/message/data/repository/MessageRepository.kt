@@ -7,7 +7,7 @@ import rx.Observable
 import com.bawei.message.data.api.MessageApi
 import com.bawei.message.data.protocol.Message
 import com.bawei.provider.entity.protocol.BaseResp
-import com.zy.netutilslib.RetrofitFactory
+import com.bawei.netutilslib.RetrofitFactory
 
 
 /*

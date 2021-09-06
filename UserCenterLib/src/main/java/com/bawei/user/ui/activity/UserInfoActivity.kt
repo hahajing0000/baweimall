@@ -69,11 +69,11 @@ class UserInfoActivity : BaseTakePhotoActivity<UserInfoPresenter>(), UserInfoVie
         初始化数据
      */
     private fun initData() {
-        mUserIcon = com.zy.storagelib.AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_ICON)
-        mUserName = com.zy.storagelib.AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_NAME)
-        mUserMobile = com.zy.storagelib.AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_MOBILE)
-        mUserGender = com.zy.storagelib.AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_GENDER)
-        mUserSign = com.zy.storagelib.AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_SIGN)
+        mUserIcon = com.bawei.storagelib.AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_ICON)
+        mUserName = com.bawei.storagelib.AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_NAME)
+        mUserMobile = com.bawei.storagelib.AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_MOBILE)
+        mUserGender = com.bawei.storagelib.AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_GENDER)
+        mUserSign = com.bawei.storagelib.AppPrefsUtils.getString(ProviderConstant.KEY_SP_USER_SIGN)
 
         mRemoteFileUrl = mUserIcon
         if (mUserIcon != ""){

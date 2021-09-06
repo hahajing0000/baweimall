@@ -45,7 +45,7 @@ abstract open class BaseMvpActivity<T : BasePresenter<*>> : BaseActivity(), Base
         初始Activity Component
      */
     private fun initActivityInjection() {
-        mActivityComponent = DaggerActivityComponent.builder().appComponent((application as com.zy.dilib.injection.BaseApplication).appComponent)
+        mActivityComponent = DaggerActivityComponent.builder().appComponent((application as com.bawei.dilib.injection.BaseApplication).appComponent)
                 .activityModule(ActivityModule(this))
                 .lifecycleProviderModule(LifecycleProviderModule(this))
                 .build()

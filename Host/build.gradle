@@ -10,8 +10,8 @@ android {
         applicationId "com.kotlin.mall"
         minSdkVersion min_sdk_version
         targetSdkVersion target_sdk_version
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         manifestPlaceholders = [
@@ -44,6 +44,7 @@ android {
 }
 
 dependencies {
+    compile project(path: ':HotFixLib')
     compile project(path: ':IMLib')
     compile project(path: ':LiveLib')
     compile fileTree(include: ['*.jar'], dir: 'libs')
@@ -70,13 +71,14 @@ dependencies {
     compile project(path: ':DILib')
     compile project(path: ':CoreLib')
 
-    //Bugly设置
-    compile 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
-    compile 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+//    //Bugly设置
+//    compile 'com.tencent.bugly:crashreport_upgrade:latest.release'//其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
+////    compile 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+//    compile 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
 
-    compile "com.umeng.umsdk:common:9.1.0" //（必选）
-    compile "com.umeng.umsdk:asms:1.1.3" // asms包依赖(必选)
-    compile "com.umeng.umsdk:crash:0.0.4" // native crash包依赖(必选)
+//    compile "com.umeng.umsdk:common:9.1.0" //（必选）
+//    compile "com.umeng.umsdk:asms:1.1.3" // asms包依赖(必选)
+//    compile "com.umeng.umsdk:crash:0.0.4" // native crash包依赖(必选)
 
     //Dagger2
     kapt "com.google.dagger:dagger-compiler:$dagger_version"

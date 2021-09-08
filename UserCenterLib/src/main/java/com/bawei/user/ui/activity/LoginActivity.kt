@@ -71,16 +71,16 @@ class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView, View.OnClick
 
             R.id.mLoginBtn -> {
                 mPresenter.login(mMobileEt.text.toString(),mPwdEt.text.toString(),mPushProvider?.getPushId()?:"")
-                EMClient.getInstance().login(mMobileEt.text.toString(),mPwdEt.text.toString(),object: EMCallBack {
-                    override fun onSuccess() {
-                    }
-
-                    override fun onProgress(p0: Int, p1: String?) {
-                    }
-
-                    override fun onError(p0: Int, p1: String?) {
-                    }
-                })
+//                EMClient.getInstance().login(mMobileEt.text.toString(),mPwdEt.text.toString(),object: EMCallBack {
+//                    override fun onSuccess() {
+//                    }
+//
+//                    override fun onProgress(p0: Int, p1: String?) {
+//                    }
+//
+//                    override fun onError(p0: Int, p1: String?) {
+//                    }
+//                })
             }
             R.id.mForgetPwdTv ->{
                 startActivity<ForgetPwdActivity>()
